@@ -88,18 +88,18 @@ static dllfunc_t cdll_exports[] =
 { "IN_ClearStates", (void **)&clgame.dllFuncs.IN_ClearStates },
 { "V_CalcRefdef", (void **)&clgame.dllFuncs.pfnCalcRefdef },
 { "KB_Find", (void **)&clgame.dllFuncs.KB_Find },
+{ "HUD_GetStudioModelInterface", (void **)&clgame.dllFuncs.pfnGetStudioModelInterface },
+{ "HUD_DirectorMessage", (void **)&clgame.dllFuncs.pfnDirectorMessage },
+{ "HUD_VoiceStatus", (void **)&clgame.dllFuncs.pfnVoiceStatus },
+{ "HUD_ChatInputPosition", (void **)&clgame.dllFuncs.pfnChatInputPosition },
+//{ "HUD_GetRenderInterface", (void **)&clgame.dllFuncs.pfnGetRenderInterface }, // Xash3D ext
+{ "HUD_GetPlayerTeam", (void **)&clgame.dllFuncs.pfnGetPlayerTeam },
 { NULL, NULL }
 };
 
 // optional exports
 static dllfunc_t cdll_new_exports[] = 	// allowed only in SDK 2.3 and higher
 {
-{ "HUD_GetStudioModelInterface", (void **)&clgame.dllFuncs.pfnGetStudioModelInterface },
-{ "HUD_DirectorMessage", (void **)&clgame.dllFuncs.pfnDirectorMessage },
-{ "HUD_VoiceStatus", (void **)&clgame.dllFuncs.pfnVoiceStatus },
-{ "HUD_ChatInputPosition", (void **)&clgame.dllFuncs.pfnChatInputPosition },
-{ "HUD_GetRenderInterface", (void **)&clgame.dllFuncs.pfnGetRenderInterface },	// Xash3D ext
-{ "HUD_GetPlayerTeam", (void **)&clgame.dllFuncs.pfnGetPlayerTeam },
 { "HUD_ClipMoveToEntity", (void **)&clgame.dllFuncs.pfnClipMoveToEntity },	// Xash3D ext
 { "IN_ClientTouchEvent", (void **)&clgame.dllFuncs.pfnTouchEvent}, // Xash3D ext
 { "IN_ClientMoveEvent", (void **)&clgame.dllFuncs.pfnMoveEvent}, // Xash3D ext
